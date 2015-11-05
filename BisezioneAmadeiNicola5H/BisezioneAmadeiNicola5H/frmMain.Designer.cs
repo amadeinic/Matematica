@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -90,8 +90,12 @@
             this.cmbScelta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbScelta.FormattingEnabled = true;
             this.cmbScelta.Items.AddRange(new object[] {
-            "e^2X-5=0",
-            "X^3+3X+senX-7=0"});
+            "x^3+x-7",
+            "e^x-3x-5",
+            "2x+sen(x)-8",
+            "x^3+3x+sen(x)-7",
+            "e^2x+x-5",
+            "x^3 -5X -1"});
             this.cmbScelta.Location = new System.Drawing.Point(97, 68);
             this.cmbScelta.Name = "cmbScelta";
             this.cmbScelta.Size = new System.Drawing.Size(143, 24);
@@ -123,6 +127,7 @@
             this.txtPrec.Name = "txtPrec";
             this.txtPrec.Size = new System.Drawing.Size(100, 22);
             this.txtPrec.TabIndex = 8;
+            this.txtPrec.TextChanged += new System.EventHandler(this.txtPrec_TextChanged);
             // 
             // label4
             // 
@@ -135,14 +140,14 @@
             // 
             // crtGrafico
             // 
-            chartArea1.Name = "ChartArea1";
-            this.crtGrafico.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.crtGrafico.ChartAreas.Add(chartArea2);
             this.crtGrafico.Location = new System.Drawing.Point(16, 203);
             this.crtGrafico.Name = "crtGrafico";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Name = "Series1";
-            this.crtGrafico.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Name = "Series1";
+            this.crtGrafico.Series.Add(series2);
             this.crtGrafico.Size = new System.Drawing.Size(683, 324);
             this.crtGrafico.TabIndex = 10;
             this.crtGrafico.Text = "chart1";
