@@ -51,47 +51,44 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(13, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Estremo A";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 34);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Estremo B";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 58);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(13, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 13);
+            this.label3.Size = new System.Drawing.Size(28, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "f(x)";
             // 
             // txtA
             // 
-            this.txtA.Location = new System.Drawing.Point(73, 8);
-            this.txtA.Margin = new System.Windows.Forms.Padding(2);
+            this.txtA.Location = new System.Drawing.Point(97, 10);
+            this.txtA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(108, 20);
+            this.txtA.Size = new System.Drawing.Size(143, 22);
             this.txtA.TabIndex = 3;
             // 
             // txtB
             // 
-            this.txtB.Location = new System.Drawing.Point(73, 32);
-            this.txtB.Margin = new System.Windows.Forms.Padding(2);
+            this.txtB.Location = new System.Drawing.Point(97, 39);
+            this.txtB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(108, 20);
+            this.txtB.Size = new System.Drawing.Size(143, 22);
             this.txtB.TabIndex = 4;
             // 
             // cmbScelta
@@ -105,18 +102,18 @@
             "x^3+3x+sen(x)-7",
             "e^2x+x-5",
             "x^3 -5X -1"});
-            this.cmbScelta.Location = new System.Drawing.Point(73, 55);
-            this.cmbScelta.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbScelta.Location = new System.Drawing.Point(97, 68);
+            this.cmbScelta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbScelta.Name = "cmbScelta";
-            this.cmbScelta.Size = new System.Drawing.Size(108, 21);
+            this.cmbScelta.Size = new System.Drawing.Size(143, 24);
             this.cmbScelta.TabIndex = 5;
             // 
             // btnCalcola
             // 
-            this.btnCalcola.Location = new System.Drawing.Point(6, 41);
-            this.btnCalcola.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCalcola.Location = new System.Drawing.Point(8, 50);
+            this.btnCalcola.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalcola.Name = "btnCalcola";
-            this.btnCalcola.Size = new System.Drawing.Size(157, 43);
+            this.btnCalcola.Size = new System.Drawing.Size(209, 53);
             this.btnCalcola.TabIndex = 6;
             this.btnCalcola.Text = "Calcola!";
             this.btnCalcola.UseVisualStyleBackColor = true;
@@ -128,28 +125,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstDisplay.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstDisplay.FormattingEnabled = true;
-            this.lstDisplay.ItemHeight = 14;
-            this.lstDisplay.Location = new System.Drawing.Point(185, 8);
-            this.lstDisplay.Margin = new System.Windows.Forms.Padding(2);
+            this.lstDisplay.ItemHeight = 18;
+            this.lstDisplay.Location = new System.Drawing.Point(247, 10);
+            this.lstDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstDisplay.Name = "lstDisplay";
-            this.lstDisplay.Size = new System.Drawing.Size(566, 186);
+            this.lstDisplay.Size = new System.Drawing.Size(753, 220);
             this.lstDisplay.TabIndex = 7;
             // 
             // txtPrec
             // 
-            this.txtPrec.Location = new System.Drawing.Point(114, 80);
-            this.txtPrec.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrec.Location = new System.Drawing.Point(152, 98);
+            this.txtPrec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrec.Name = "txtPrec";
-            this.txtPrec.Size = new System.Drawing.Size(67, 20);
+            this.txtPrec.Size = new System.Drawing.Size(88, 22);
             this.txtPrec.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 83);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(13, 102);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 13);
+            this.label4.Size = new System.Drawing.Size(133, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Precisione (N. cifre)";
             // 
@@ -160,14 +156,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.crtGrafico.ChartAreas.Add(chartArea1);
-            this.crtGrafico.Location = new System.Drawing.Point(12, 205);
-            this.crtGrafico.Margin = new System.Windows.Forms.Padding(2);
+            this.crtGrafico.Location = new System.Drawing.Point(16, 252);
+            this.crtGrafico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.crtGrafico.Name = "crtGrafico";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Name = "Series1";
             this.crtGrafico.Series.Add(series1);
-            this.crtGrafico.Size = new System.Drawing.Size(739, 321);
+            this.crtGrafico.Size = new System.Drawing.Size(985, 395);
             this.crtGrafico.TabIndex = 10;
             this.crtGrafico.Text = "chart1";
             // 
@@ -175,9 +171,10 @@
             // 
             this.rdbBisezione.AutoSize = true;
             this.rdbBisezione.Checked = true;
-            this.rdbBisezione.Location = new System.Drawing.Point(6, 19);
+            this.rdbBisezione.Location = new System.Drawing.Point(8, 23);
+            this.rdbBisezione.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbBisezione.Name = "rdbBisezione";
-            this.rdbBisezione.Size = new System.Drawing.Size(70, 17);
+            this.rdbBisezione.Size = new System.Drawing.Size(90, 21);
             this.rdbBisezione.TabIndex = 11;
             this.rdbBisezione.TabStop = true;
             this.rdbBisezione.Text = "Bisezione";
@@ -186,9 +183,10 @@
             // rdbTangenti
             // 
             this.rdbTangenti.AutoSize = true;
-            this.rdbTangenti.Location = new System.Drawing.Point(100, 19);
+            this.rdbTangenti.Location = new System.Drawing.Point(133, 23);
+            this.rdbTangenti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbTangenti.Name = "rdbTangenti";
-            this.rdbTangenti.Size = new System.Drawing.Size(67, 17);
+            this.rdbTangenti.Size = new System.Drawing.Size(85, 21);
             this.rdbTangenti.TabIndex = 12;
             this.rdbTangenti.TabStop = true;
             this.rdbTangenti.Text = "Tangenti";
@@ -199,18 +197,20 @@
             this.gbpExe.Controls.Add(this.rdbTangenti);
             this.gbpExe.Controls.Add(this.rdbBisezione);
             this.gbpExe.Controls.Add(this.btnCalcola);
-            this.gbpExe.Location = new System.Drawing.Point(13, 105);
+            this.gbpExe.Location = new System.Drawing.Point(17, 129);
+            this.gbpExe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbpExe.Name = "gbpExe";
-            this.gbpExe.Size = new System.Drawing.Size(168, 89);
+            this.gbpExe.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbpExe.Size = new System.Drawing.Size(224, 110);
             this.gbpExe.TabIndex = 13;
             this.gbpExe.TabStop = false;
             this.gbpExe.Text = "Esegui";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 544);
+            this.ClientSize = new System.Drawing.Size(1020, 670);
             this.Controls.Add(this.gbpExe);
             this.Controls.Add(this.crtGrafico);
             this.Controls.Add(this.label4);
@@ -222,9 +222,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMain";
-            this.Text = "Metodo di Bisezione - Nicola Amadei 2015";
+            this.Text = "Trova Zeri - Nicola Amadei 2016";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.crtGrafico)).EndInit();
             this.gbpExe.ResumeLayout(false);

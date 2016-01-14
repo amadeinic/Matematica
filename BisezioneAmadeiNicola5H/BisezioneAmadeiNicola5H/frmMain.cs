@@ -12,12 +12,14 @@ namespace BisezioneAmadeiNicola5H
 {
     public partial class frmMain : Form
     {    
-       
+       //Nicola Amadei 2016
 
         private void frmMain_Load(object sender, EventArgs e)
         {
             txtPrec.Text = "10";
             cmbScelta.SelectedIndex = 0;
+            txtA.Text = "-10";
+            txtB.Text = "10";
         }
 
         public frmMain()
@@ -41,23 +43,21 @@ namespace BisezioneAmadeiNicola5H
                 MessageBox.Show("La precisione deve essere compresa tra 1 e 15.\n\nOriginal message:\n" + erore.Message, "Attenzione!");
             }
 
-
-
             try
             {
                 lstDisplay.Items.Clear();
                 if (Convert.ToDouble(txtA.Text) < Convert.ToDouble(txtB.Text))
                 {
-
-                    Intervallatore(Convert.ToDouble(txtA.Text), Convert.ToDouble(txtB.Text));
-
-                    if (lstDisplay.Items.Count == 0)
-                        lstDisplay.Items.Add("Nessuno zero nell'intervallo specificato");
+                    EseguiSuIntervallo(Convert.ToDouble(txtA.Text), Convert.ToDouble(txtB.Text));                    
                     Grafico(Convert.ToDouble(txtA.Text), Convert.ToDouble(txtB.Text));
+                    if (lstDisplay.Items.Count == 0)
+                    {
+                        lstDisplay.Items.Add("Non ho trovato nessuno zero.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("L'estremo sinistro non può essere maggiore di quello destro", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show("L'estremo sinistro non può essere maggiore di quello destro", "Non posso continuare...", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 }
             }
             catch
@@ -68,13 +68,13 @@ namespace BisezioneAmadeiNicola5H
         }
 
     
-        public void Intervallatore(double estremoSx, double estremoDx)
+        public void EseguiSuIntervallo(double estremoSx, double estremoDx)
         {
             double incremento = (estremoDx - estremoSx) / 100, temp = 0;
             for (double a = estremoSx; a < estremoDx; a += incremento)
             {
                 if (temp != 0)
-                    if (Funzione(temp) * Funzione(a) < 0)
+                    if (f(temp) * f(a) < 0)
                     {
                         if (rdbBisezione.Checked)
                         {
@@ -83,7 +83,7 @@ namespace BisezioneAmadeiNicola5H
                         if(rdbTangenti.Checked)
                         {
                             Console.WriteLine("Eccomi");
-                            Tangenti(temp, a);
+                            Tangenti(temp);
                         }
                     }
                 temp = a;
@@ -97,7 +97,7 @@ namespace BisezioneAmadeiNicola5H
 
             for (differenza = b - a, c = (a + b) / 2, cont = 0; differenza > Math.Pow(10, -Convert.ToInt32(txtPrec.Text)); cont++, differenza = b - a, c = (a + b) / 2)
             {
-                if (Funzione(a) * Funzione(c) > 0)
+                if (f(a) * f(c) > 0)
                     a = c;
                 else
                     b = c;
@@ -105,20 +105,19 @@ namespace BisezioneAmadeiNicola5H
             StampaZero(c, cont);
         }
 
-        public void Tangenti(double a, double b)
+        public void Tangenti(double a)
         {
-            int cont = 0;
-            double c = a;
-            for (double dif = 1; dif > Math.Pow(10, -Convert.ToInt32(txtPrec.Text)); cont++)
+            int cont = 0;            
+            for (double differenza = 1; differenza > Math.Pow(10, -Convert.ToInt32(txtPrec.Text)); cont++)
             {
-                c = c - (Funzione(c) / Derivata(c));
-                dif = Math.Abs(Funzione(c) / Derivata(c));
+                a = a - (f(a) / Derivata(a));
+                differenza = Math.Abs(f(a) / Derivata(a));
             }
-            StampaZero(c, cont);
+            StampaZero(a, cont);
 
         }
 
-        public double Funzione(double numero)
+        public double f(double numero)
         {
             switch (cmbScelta.SelectedIndex)
             {
@@ -136,11 +135,11 @@ namespace BisezioneAmadeiNicola5H
         {
             switch (cmbScelta.SelectedIndex)
             {
-                //case 0: return Math.Pow(numero, 3) + numero - 7;
-                //case 1: return Math.Pow(Math.E, numero) - 3 * numero - 5;
-                //case 2: return 2 * numero + Math.Sin(numero) - 8;
-                //case 3: return Math.Pow(numero, 3) + (3 * numero) + Math.Sin(numero) - 7;
-                //case 4: return Math.Pow(Math.E, 2 * numero) + numero - 5;
+                case 0: return 3* Math.Pow(numero, 2) + 1;
+                case 1: return Math.Pow(Math.E, numero) - 3;
+                case 2: return 2 + Math.Cos(numero);
+                case 3: return 3*Math.Pow(numero, 2) + 3 + Math.Cos(numero);
+                case 4: return Math.Pow(Math.E, 2 * numero) + 1;
                 case 5: return 3* Math.Pow(numero, 2) - 5;
                 default: return 0;
             }
@@ -161,7 +160,7 @@ namespace BisezioneAmadeiNicola5H
             double incremento = (destra - sinistra) / 50;
             for (double a = sinistra; a < destra; a += incremento)
             {
-                crtGrafico.Series[0].Points.AddXY(a, Funzione(a));
+                crtGrafico.Series[0].Points.AddXY(a, f(a));
             }
         }
     }
